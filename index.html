@@ -1,0 +1,34 @@
+---
+layout: default
+---
+
+<div class="home">
+
+  <p class="main-page-top">
+  <div class="main-page-decoration"><img src="{{ site.baseurl }}/assets/pages/main-page-decoration.jpg"></div>
+  <div class="main-page-intro">Ham radio and other fun stuff<p/>by Keegan KM6PNI</div>
+  </p>
+
+  <h1>Posts</h1>
+
+  <ul class="post-list">
+    {% for post in site.posts %}
+      <li>
+        <span class="post-meta">{{ post.date | date: "%b %-d, %Y" }}</span>
+
+        <h2>
+          <a class="post-link" href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a>
+        </h2>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <h1>Views</h1>
+
+  <ul>
+  <li><a href="{{ site.baseurl }}/tags">View posts by tag</a></li>
+
+  <li class="rss-subscribe"><a href="{{ "/feed.xml" | prepend: site.baseurl }}">Subscribe via RSS</a></li>
+  </ul>
+
+</div>

@@ -1,0 +1,6 @@
+title: Skywave
+description: A blog about amateur radio and other fun stuff!
+baseurl: "/skywave"
+url: "https://kmcallister.github.io"
+github_username: kmcallister
+markdown: kramdown
