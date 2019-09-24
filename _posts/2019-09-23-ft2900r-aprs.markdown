@@ -1,0 +1,168 @@
+---
+layout: post
+author: Keegan McAllister
+title:  APRS with the Yaesu FT-2900R
+date:   2019-09-23
+tags:   aprs radio
+---
+
+This is a short write-up about using APRS with the [Yaesu
+FT-2900R](https://www.universal-radio.com/catalog/fm_txvrs/2900.html) mobile
+radio. For those who aren't familiar,
+[APRS](https://en.wikipedia.org/wiki/Automatic_Packet_Reporting_System) is a
+global network which allows sending GPS position updates, text messages, and
+other data over ham radio, mainly 2 meter FM. APRS "digipeaters" relay these
+messages by radio and "IGates" send them to the Internet, allowing global
+communication.
+
+[![An amateur radio connected to a smaller box with a home-built cable.](/skywave/assets/2019-09-23-ft2900r-aprs/small/01-radio-with-tnc.jpg)](/skywave/assets/2019-09-23-ft2900r-aprs/orig/01-radio-with-tnc.jpg)
+
+Here's the radio in action, with a [Mobilinkd
+TNC3](https://store.mobilinkd.com/products/mobilinkd-tnc3) at right (more on
+this little device later).
+
+The FT-2900R seems to be a great choice for APRS. I receive lots of packets and
+even at 5 watts, my packets get through to several digipeaters/IGates in the
+area. The FT-2900R can output up to 75 watts; while this is much more than is
+typically used for APRS, it could be useful in remote areas far away from other
+APRS nodes. Despite its high output power, the FT-2900R is fanless; the entire
+case serves as a giant heatsink. As a result, it is built like a tank and will
+hold up in demanding environments. Finally, it is affordable on the used
+market; I got two for $200 total on
+[/r/hamfest](https://www.reddit.com/r/hamfest).
+
+[![An antenna, approximately 2 feet long, sitting on top of a metal tray on a deck railing.](/skywave/assets/2019-09-23-ft2900r-aprs/small/02-antenna.jpg)](/skywave/assets/2019-09-23-ft2900r-aprs/orig/02-antenna.jpg)
+
+My antenna for this test is a
+[MFJ-1729](https://www.mfjenterprises.com/Product.php?productid=MFJ-1729)
+magnetic mount antenna on top of a metal baking tray, which acts as a primitive
+ground plane. A [roll-up
+J-pole](https://www.work-sat.com/Antennas_files/FONG-DBJ2.pdf) is another
+convenient option for portable use. For a directional link to a faraway
+digipeater or IGate, a [homemade
+yagi](http://theleggios.net/wb2hol/projects/rdf/tape_bm.htm) might work well.
+
+[![A screenshot from an Android app of APRS station reports.](/skywave/assets/2019-09-23-ft2900r-aprs/small/03-aprsdroid.png)](/skywave/assets/2019-09-23-ft2900r-aprs/orig/03-aprsdroid.png)
+
+The Mobilinkd connects to my Android phone over Bluetooth. Using
+[APRSdroid](https://aprsdroid.org) I can send position reports, see a list or
+map of other stations, and send and receive text messages. I can even use
+[SMS](https://smsgte.org) and [email](https://winlink.org/APRSLink) through
+appropriate gateway services. This could be quite useful in a remote area with
+no cell coverage, or in an emergency where the cell network is down. (Note
+that, like everything on ham radio, APRS messages are [public
+information](https://aprs.link/app/aprs/stations/messages-SMSGTE).)
+
+![A Google Maps overlay showing my position.](/skywave/assets/2019-09-23-ft2900r-aprs/orig/04-map.png)
+
+Because my position updates reach an IGate, my location appears on
+[aprs.fi](https://aprs.fi).
+
+![A list of stations near me and stations that can hear
+me.](/skywave/assets/2019-09-23-ft2900r-aprs/orig/05-station-list.png)
+
+In addition to the map, a lot of other station information is available on the
+website.  As you can see, a number of nodes are able to hear me — the top 3 at
+only 5 watts.
+
+# The cable
+
+The big disadvantage of the FT-2900R in this application is that I had to build
+a strange custom cable to connect it to the TNC.  APRS packets are
+[encoded](https://en.wikipedia.org/wiki/Bell_202_modem) as audio tones sent
+over FM radio. The TNC is a modem[^1]; it *mo*dulates bytes into tones and
+*dem*odulates the incoming tones back to bytes, very much like the modems we
+once used for dial-up internet. Its interface to the radio consists of
+bidirectional analog audio, plus a "push-to-talk" (PTT) signal which tells the
+radio when to transmit. Newer Yaesu radios have a [dedicated "DATA"
+jack](https://www.soundcardpacket.org/7miniDIN.aspx) on the rear which provides
+all of these signals; however, the FT-2900R does not.
+
+[![A three-headed cable with one phone-style RJ12 plug and two headphone-style
+plugs.](/skywave/assets/2019-09-23-ft2900r-aprs/small/06-the-cable.jpg)](/skywave/assets/2019-09-23-ft2900r-aprs/orig/06-the-cable.jpg)
+
+The workaround is this three-headed cable...
+
+[![Close-up of the cable plugged into the front of the radio.](/skywave/assets/2019-09-23-ft2900r-aprs/small/07-front-connector.jpg)](/skywave/assets/2019-09-23-ft2900r-aprs/orig/07-front-connector.jpg)
+
+...which plugs into the front-panel microphone jack...
+
+[![Close-up of the cable plugged into the rear of the
+radio.](/skywave/assets/2019-09-23-ft2900r-aprs/small/08-rear-connector.jpg)](/skywave/assets/2019-09-23-ft2900r-aprs/orig/08-rear-connector.jpg)
+
+...and also the rear speaker jack.
+
+[![Side view of the radio. The three parts of the cable merge within a piece of
+heat-shrink
+tubing.](/skywave/assets/2019-09-23-ft2900r-aprs/small/09-side-view.jpg)](/skywave/assets/2019-09-23-ft2900r-aprs/orig/09-side-view.jpg)
+
+These two connections are spliced onto the cable which connects to the TNC. A
+piece of heat-shrink tubing covers the splice.
+
+[![Overall view of the cable as routed around the radio.](/skywave/assets/2019-09-23-ft2900r-aprs/small/10-cable-installed.jpg)](/skywave/assets/2019-09-23-ft2900r-aprs/orig/10-cable-installed.jpg)
+
+Once zip-tied to the chassis, the wiring is relatively tidy.
+
+# Building the cable
+
+The cable was not too difficult to make. If you have a bit of soldering
+experience, it should take only an hour or so. I started with a RJ12 patch
+cable, a 3.5mm TS plug for the speaker jack, and a 3.5mm TRRS plug for the TNC.
+
+[![Wires held by a "helping hands" soldering tool, in the process of being spliced.](/skywave/assets/2019-09-23-ft2900r-aprs/small/11-build-1.jpg)](/skywave/assets/2019-09-23-ft2900r-aprs/orig/11-build-1.jpg)
+
+Here I have just finished splicing the three microphone-jack connections
+(audio, PTT, and ground), the two speaker-jack connections (audio and ground)
+and the TNC side of the cable. The three wires at the top left remain
+unconnected; they connect to the pins on the RJ12 jack that aren't used for
+this project.
+
+[![The finished splices.](/skywave/assets/2019-09-23-ft2900r-aprs/small/12-build-2.jpg)](/skywave/assets/2019-09-23-ft2900r-aprs/orig/12-build-2.jpg)
+
+Bundled up and ready for the outer heat shrink.
+
+[![Soldering to a TRRS plug.](/skywave/assets/2019-09-23-ft2900r-aprs/small/13-build-3.jpg)](/skywave/assets/2019-09-23-ft2900r-aprs/orig/13-build-3.jpg)
+
+The hardest part was soldering the TRRS plug, especially the inner pin. After
+all four wires were connected, I crimped the tabs (bottom left of connector)
+around the cable. I did the same on the speaker plug (not shown).
+
+[![Two printouts with handwritten notes about wire colors.](/skywave/assets/2019-09-23-ft2900r-aprs/small/14-build-notes.jpg)](/skywave/assets/2019-09-23-ft2900r-aprs/orig/14-build-notes.jpg)
+
+I made notes about the color of each wire so I could connect everything
+correctly. The printouts are from [this
+page](http://kf3g25cw.altervista.org/Links/FT-2900R_MFJ-1270X_Cable/FT-2900R_MFJ-1270X_Cable.01.html)
+and [the Mobilinkd TNC3
+manual](https://mobilinkd.s3.amazonaws.com/TNC3/MobilinkdTNC3.pdf).
+
+# Future plans
+
+My long-term plan is to replace the TNC with a [Raspberry Pi running
+Direwolf](https://github.com/wb2osz/direwolf/blob/master/doc/Raspberry-Pi-APRS.pdf)
+and put everything in an ammo can. Then I will have a rugged, self-contained
+digipeater that I can deploy in a remote area or for emergency use.  I can, for
+example, carry my handheld radio and the Mobilinkd and use APRS whenever I am within
+radio range of the portable digipeater.
+
+For power I'll use my [solar battery
+box](/skywave/2019/07/15/solar-battery.html) or any other 12V (really ≈13V)
+power supply. The digipeater can also report its own status (battery voltage,
+temperature, etc.) over APRS. I'll include an external WiFi antenna for IGate
+functionality when an Internet connection is available. Other possibilities
+include a GPS receiver and 3G/LTE connectivity.
+
+Of course, the cable I made is not limited to APRS. I could use it for [AX.25
+networking](https://en.wikipedia.org/wiki/AX.25), DTMF-based remote control of
+some device, a voice mailbox system or anything else that involves a computer
+sending and receiving audio on 2 meter FM.
+
+Although everything seems to be working great, I do worry about RF interference
+into the audio cables. If that becomes a problem, I will try shielded audio
+cables.  A metal ammo can, with openings much smaller than 2 meters, will also
+provide some shielding.
+
+Thanks for reading and stay tuned for updates on this project!
+
+# Footnotes
+
+[^1]: TNC stands for [terminal node controller](https://en.wikipedia.org/wiki/Terminal_node_controller). These were originally quite feature-rich devices, but over time more and more functionality has been moved into the host — in this case, my Android phone. The Mobilinkd TNC3 is just a modem which speaks a very simple [frame-based serial protocol](https://en.wikipedia.org/wiki/KISS_(TNC)) with the host. It doesn't know anything about APRS per se.
