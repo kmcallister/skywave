@@ -36,10 +36,10 @@ Radio waves travel at the speed of light,[^vf] so there is a strict
 relationship between frequency and wavelength:
 
 $$
-\begin{align}
+\begin{align*}
 \textrm{wavelength} & = \frac{\textrm{speed of light}}{\textrm{frequency}} \\\\
 \textrm{frequency} & = \frac{\textrm{speed of light}}{\textrm{wavelength}}
-\end{align}
+\end{align*}
 $$
 
 <noscript>
@@ -50,10 +50,10 @@ Because the speed of light is very close to 300,000,000 meters per second,
 we can use this approximation:
 
 $$
-\begin{align}
+\begin{align*}
 \textrm{wavelength in meters} & = \frac{300}{\textrm{frequency in MHz}} \\\\
 \textrm{frequency in MHz} & = \frac{300}{\textrm{wavelength in meters}}
-\end{align}
+\end{align*}
 $$
 
 <noscript>
