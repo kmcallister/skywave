@@ -42,6 +42,10 @@ $$
 \end{align}
 $$
 
+<noscript>
+<img alt="Wavelength equals speed of light divided by frequency, and frequency equals speed of light divided by wavelength." class="center-block" src="/skywave/assets/2019-09-27-bands-and-modes/eq1.png" />
+</noscript>
+
 Because the speed of light is very close to 300,000,000 meters per second,
 we can use this approximation:
 
@@ -51,6 +55,10 @@ $$
 \textrm{frequency in MHz} & = \frac{300}{\textrm{wavelength in meters}}
 \end{align}
 $$
+
+<noscript>
+<img alt="Wavelength in meters equals 300 divided by frequency in megahertz, and frequency in megahertz equals 300 divided by wavelength in meters." class="center-block" src="/skywave/assets/2019-09-27-bands-and-modes/eq2.png" />
+</noscript>
 
 For example, that FM radio station at 96.5 MHz has a wavelength of
 approximately 300 / 96.5 = 3.1 meters. WiFi at 2.4 GHz (2400 MHz) has a
