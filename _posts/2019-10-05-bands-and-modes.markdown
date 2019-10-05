@@ -152,7 +152,7 @@ chart](http://www.arrl.org/files/file/Regulatory/Band%20Chart/Band%20Chart%20-%2
 to find the exact frequency limits and privileges, which vary by country and by
 license type.
 
-![A chart of privileges on the 40, 30, and 20 meter bands.](/skywave/assets/2019-10-05-bands-and-modes/ham-bands.png){:.center-block}
+[![A chart of privileges on the 40, 30, and 20 meter bands.](/skywave/assets/2019-10-05-bands-and-modes/ham-bands.png){:.center-block}](http://www.arrl.org/files/file/Regulatory/Band%20Chart/Band%20Chart%20-%2011X17%20Color.pdf)
 
 <small>(excerpt from [ARRL band chart](http://www.arrl.org/files/file/Regulatory/Band%20Chart/Band%20Chart%20-%2011X17%20Color.pdf))</small>
 
@@ -167,7 +167,8 @@ building, which receives a signal on one frequency and simultaneously
 retransmits it on another. Because the repeater has a better location, better
 antenna and more power than your handheld radio, it can vastly extend your
 effective range — sometimes to 100 miles or more. A full write-up about
-repeaters is out of scope here but you can find a wealth of information online.
+repeaters is out of scope here, but you can find a wealth of information
+online.
 
 ![Diagram of two handheld radios communicating through a repeater.](/skywave/assets/2019-10-05-bands-and-modes/repeater.png){:.center-block}
 
@@ -184,8 +185,8 @@ the current sunspot minimum, lower frequencies like
 [40](https://en.wikipedia.org/wiki/40-meter_band) and [20
 meters](https://en.wikipedia.org/wiki/20-meter_band) are open on a daily basis,
 while the higher frequencies like [10
-meters](https://en.wikipedia.org/wiki/10-meter_band) are only open for
-long-distance communication sporadically.
+meters](https://en.wikipedia.org/wiki/10-meter_band) are only sporadically open
+for long-distance communication.
 
 # Voice modes
 
@@ -199,7 +200,7 @@ amplitude (strength) of the radio wave varies according to the amplitude of the
 sound wave. Because AM transmitters are easy to build and AM receivers are
 [even simpler](https://en.wikipedia.org/wiki/Crystal_radio), AM was the first
 voice mode. It is still used for broadcasting and some other things, but has
-largely been replaced by SSB on ham radio (see below).
+largely been replaced by FM and SSB on ham radio (see below).
 
 **Frequency modulation (FM)** is another audio mode. Instead of varying
 amplitude over time, we vary frequency. FM produces clear audio and is the
@@ -296,15 +297,17 @@ broadcast TV. This requires a lot of bandwidth (6 MHz) so it's only done on the
 higher-frequency bands (70 centimeters and up) where there is more room.
 
 That's it for now! Hope you found this informative and stay tuned for more
-content.
+content.  There is lots more to say about modes so check out
+[Wikipedia](https://en.wikipedia.org/wiki/List_of_amateur_radio_modes) or [the
+ARRL website](http://www.arrl.org/modes-systems) if you'd like to know more.
 
 # Footnotes
 
-[^vector]: The radio wave itself consists of an electric field and a magnetic field, oscillating together, hence "[electromagnetic (EM) radiation](https://en.wikipedia.org/wiki/Electromagnetic_radiation)". Both of these are vector fields, meaning that they have both a magnitude (strength) and a direction at each point in space. The voltage detected by your radio is a scalar quantity — magnitude only, whether positive or negative. Usually it's produced by the electric field, which induces an electrical current in your antenna. But there are some antennas, such as [magnetic loop antennas](https://en.wikipedia.org/wiki/Loop_antenna#Magnetic_vs._electrical_antennas), where the magnetic field does the work instead. I may irritate some hams by saying this, but the physics of radio waves are not that important until you get into more advanced topics like designing your own antennas.
+[^vector]: The radio wave itself consists of an electric field and a magnetic field, oscillating together, hence "[electromagnetic (EM) radiation](https://en.wikipedia.org/wiki/Electromagnetic_radiation)". These are vector fields, meaning that they have both a magnitude (strength) and a direction at each point in space. The voltage detected by your radio is a scalar quantity — magnitude only, whether positive or negative. Usually it's produced by the electric field, which induces an electrical current in your antenna. But there are some antennas, such as [magnetic loop antennas](https://en.wikipedia.org/wiki/Loop_antenna#Magnetic_vs._electrical_antennas), where the magnetic field does the work instead.
 
 [^vf]: The actual speed depends on what material the light or radio wave is moving through.  Light is fastest in a vaccum, and about 0.03% slower in air.  Radio waves travel up to 1/3 slower in wire or coaxial cable. The ratio of the speed in a material to the speed in vacuum is called the *velocity factor*. It's important to account for velocity factor when designing antennas. In optics, the reciprocal of the velocity factor is called the [index of refraction](http://hyperphysics.phy-astr.gsu.edu/hbase/Tables/indrf.html).
 
-[^light]: The light we see is also an electromagnetic wave, at a [*really* high frequency](https://en.wikipedia.org/wiki/Electromagnetic_spectrum) like 300 THz (300,000 GHz). At even higher frequencies you get ultraviolet light, then X-rays, then gamma rays. In between radio frequencies and infrared light, there is a "[terahertz gap](https://en.wikipedia.org/wiki/Terahertz_radiation)" where neither radio technology nor optical technology works very well, making it difficult to utilize those frequencies.
+[^light]: The light we see is also an electromagnetic wave, at a [*really* high frequency](https://en.wikipedia.org/wiki/Electromagnetic_spectrum) like 300 THz (300,000 GHz). At even higher frequencies you get ultraviolet light, then X-rays, then gamma rays. In between radio frequencies and infrared light, there is a "[terahertz gap](https://en.wikipedia.org/wiki/Terahertz_gap)" where neither radio technology nor optical technology works very well, making it difficult to utilize those frequencies.
 
 [^160m]: A lot of ham HF equipment can transmit down to 1.8 MHz, the bottom of the [160 meter band](https://en.wikipedia.org/wiki/160-meter_band), even though that is technically [medium frequency](https://en.wikipedia.org/wiki/Medium_frequency) and not HF. Some can also transmit on [6 meters](https://en.wikipedia.org/wiki/6-meter_band), at the low end of VHF. 6 meters is known as the "magic band" because it's quite unpredictable and has characteristics of both HF and VHF.
 
