@@ -2,7 +2,7 @@
 layout:  post
 author:  Keegan McAllister
 title:   Radio concepts&#58; Bands and modes
-date:    2019-09-27
+date:    2019-10-05
 tags:    concepts intro radio
 mathjax: true
 ---
@@ -28,7 +28,7 @@ distance between consecutive wave peaks (or troughs) in space, at a single
 instant in time.
 
 ![Diagram of a sine wave labeled with crest, trough, wavelength, and
-amplitude](/skywave/assets/2019-09-27-bands-and-modes/wavelength.jpg){:.center-block}
+amplitude](/skywave/assets/2019-10-05-bands-and-modes/wavelength.jpg){:.center-block}
 
 <small>([image source](https://cnx.org/contents/Sr8Ev5Og@12.2:1Cicp6CO@17/5-2-Waves-and-Wavelengths))</small>
 
@@ -43,7 +43,7 @@ $$
 $$
 
 <noscript>
-<img alt="Wavelength equals speed of light divided by frequency, and frequency equals speed of light divided by wavelength." class="center-block" src="/skywave/assets/2019-09-27-bands-and-modes/eq1.png" />
+<img alt="Wavelength equals speed of light divided by frequency, and frequency equals speed of light divided by wavelength." class="center-block" src="/skywave/assets/2019-10-05-bands-and-modes/eq1.png" />
 </noscript>
 
 Because the speed of light is very close to 300,000,000 meters per second,
@@ -57,7 +57,7 @@ $$
 $$
 
 <noscript>
-<img alt="Wavelength in meters equals 300 divided by frequency in megahertz, and frequency in megahertz equals 300 divided by wavelength in meters." class="center-block" src="/skywave/assets/2019-09-27-bands-and-modes/eq2.png" />
+<img alt="Wavelength in meters equals 300 divided by frequency in megahertz, and frequency in megahertz equals 300 divided by wavelength in meters." class="center-block" src="/skywave/assets/2019-10-05-bands-and-modes/eq2.png" />
 </noscript>
 
 For example, that FM radio station at 96.5 MHz has a wavelength of
@@ -87,7 +87,7 @@ into three general ranges:
   extremely long distances, far beyond the horizon.
 
   ![A diagram of skywave
-  propagation.](/skywave/assets/2019-09-27-bands-and-modes/skywave.jpg){:.center-block}
+  propagation.](/skywave/assets/2019-10-05-bands-and-modes/skywave.jpg){:.center-block}
 
   <small>([image source](https://en.wikipedia.org/wiki/Skywave#/media/File:Skywave.jpg))</small>
   
@@ -152,7 +152,7 @@ chart](http://www.arrl.org/files/file/Regulatory/Band%20Chart/Band%20Chart%20-%2
 to find the exact frequency limits and privileges, which vary by country and by
 license type.
 
-![A chart of privileges on the 40, 30, and 20 meter bands.](/skywave/assets/2019-09-27-bands-and-modes/ham-bands.png){:.center-block}
+![A chart of privileges on the 40, 30, and 20 meter bands.](/skywave/assets/2019-10-05-bands-and-modes/ham-bands.png){:.center-block}
 
 <small>(excerpt from [ARRL band chart](http://www.arrl.org/files/file/Regulatory/Band%20Chart/Band%20Chart%20-%2011X17%20Color.pdf))</small>
 
@@ -169,7 +169,7 @@ antenna and more power than your handheld radio, it can vastly extend your
 effective range — sometimes to 100 miles or more. A full write-up about
 repeaters is out of scope here but you can find a wealth of information online.
 
-![Diagram of two handheld radios communicating through a repeater.](/skywave/assets/2019-09-27-bands-and-modes/repeater.png){:.center-block}
+![Diagram of two handheld radios communicating through a repeater.](/skywave/assets/2019-10-05-bands-and-modes/repeater.png){:.center-block}
 
 <small>(own work)</small>
 
@@ -208,7 +208,7 @@ FM and only FM. The main downside is that a FM signal has a large *bandwidth*:
 it occupies a large range of frequencies. For this reason and others, FM is not
 used on HF bands.
 
-![Animation comparing AM and FM.](/skywave/assets/2019-09-27-bands-and-modes/modulation.gif){: class="center-block" style="width: 400px;"}
+![Animation comparing AM and FM.](/skywave/assets/2019-10-05-bands-and-modes/modulation.gif){: class="center-block" style="width: 400px;"}
 
 <small>([image source](https://en.wikipedia.org/wiki/Amplitude_modulation#/media/File:Amfm3-en-de.gif))</small>
 
@@ -216,7 +216,7 @@ used on HF bands.
 different from FM, the varying amplitude nonetheless spreads the signal over a
 range of frequencies.
 
-![Waterfall plot of an AM signal, showing two sidebands and a carrier.](/skywave/assets/2019-09-27-bands-and-modes/am-waterfall.jpg){:.center-block}
+![Waterfall plot of an AM signal, showing two sidebands and a carrier.](/skywave/assets/2019-10-05-bands-and-modes/am-waterfall.jpg){:.center-block}
 
 <small>([image source](https://en.wikipedia.org/wiki/Amplitude_modulation#/media/File:AM_signal.jpg))</small>
 
@@ -228,7 +228,7 @@ other below.  These are the upper and lower *sidebands*. In other words, the AM
 signal has a lot of redundancy. By transmitting just one sideband and no
 carrier, we can save on both power and bandwidth.
 
-![Waterfall plot of just the upper sideband.](/skywave/assets/2019-09-27-bands-and-modes/usb-waterfall.jpg){:.center-block}
+![Waterfall plot of just the upper sideband.](/skywave/assets/2019-10-05-bands-and-modes/usb-waterfall.jpg){:.center-block}
 
 <small>(same image source)</small>
 
