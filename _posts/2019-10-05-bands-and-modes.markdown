@@ -237,7 +237,7 @@ This waterfall shows an *upper sideband* (USB) signal. The *lower sideband*
 (LSB) would be the same, except flipped left-to-right. For [historical
 reasons](http://www.mdarc.org/resources/operating-aids/lsb-or-usb), LSB is used
 on the lower HF bands (up to 40 meters) while USB is used at higher
-frequencies.
+frequencies.[^60m]
 
 The main disadvantage of SSB is that it requires more complex electronics in
 both the transmitter and receiver, which is why SSB did not catch on until the
@@ -310,5 +310,7 @@ ARRL website](http://www.arrl.org/modes-systems) if you'd like to know more.
 [^light]: The light we see is also an electromagnetic wave, at a [*really* high frequency](https://en.wikipedia.org/wiki/Electromagnetic_spectrum) like 300 THz (300,000 GHz). At even higher frequencies you get ultraviolet light, then X-rays, then gamma rays. In between radio frequencies and infrared light, there is a "[terahertz gap](https://en.wikipedia.org/wiki/Terahertz_gap)" where neither radio technology nor optical technology works very well, making it difficult to utilize those frequencies.
 
 [^160m]: A lot of ham HF equipment can transmit down to 1.8 MHz, the bottom of the [160 meter band](https://en.wikipedia.org/wiki/160-meter_band), even though that is technically [medium frequency](https://en.wikipedia.org/wiki/Medium_frequency) and not HF. Some can also transmit on [6 meters](https://en.wikipedia.org/wiki/6-meter_band), at the low end of VHF. 6 meters is known as the "magic band" because it's quite unpredictable and has characteristics of both HF and VHF.
+
+[^60m]: And on [60 meters](https://en.wikipedia.org/wiki/60-meter_band), which is a special case in many respects.
 
 [^cw]: Actually, not quite. The [very first radio transmitters](https://en.wikipedia.org/wiki/Spark-gap_transmitter) used an electric spark to excite a [resonant circuit](https://en.wikipedia.org/wiki/LC_circuit), kind of like hitting a bell with a hammer. This produces a [damped wave](https://en.wikipedia.org/wiki/Damped_wave) that fades out until the next spark happens. Damped waves are extremely wasteful of bandwidth and are no longer allowed. Once [continuous wave](https://en.wikipedia.org/wiki/Continuous_wave) took over, the term CW became synonymous with Morse code itself. But a CW signal is not actually continuous; it switches on and off with the pattern of Morse dots and dashes.
